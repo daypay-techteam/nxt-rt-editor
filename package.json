@@ -1,0 +1,28 @@
+{
+  "name": "jjeditor",
+  "version": "1.0.0",
+  "description": "A lightweight, extensible, framework-independent rich text editor engine. released under the **MIT License**",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "editor",
+    "rich-text-editor",
+    "typescript",
+    "javascript",
+    "wysiwyg"
+  ],
+  "author": "JJEditor Contributors",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
