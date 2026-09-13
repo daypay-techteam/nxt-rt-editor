@@ -9,32 +9,34 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>JJEditor</title>
-
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 40px;
     }
 
-    .editor {
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      min-height: 200px;
-      padding: 16px;
-      outline: none;
-    }
+    #editor {
+  min-height: 200px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
 
-    .editor:focus {
-      border-color: #666;
-    }
+#editor:focus {
+  border-color: #666;
+}
+
+#editor p {
+  margin: 0 0 8px;
+}
   </style>
 </head>
 
 <body>
   <h1>JJEditor</h1>
   <div id="editor" class="editor"></div>
-  <script type="module" src="./dist/main.js"></script>
+  <script type="module" src="../dist/main.js"></script>
 </body>
 
 </html>

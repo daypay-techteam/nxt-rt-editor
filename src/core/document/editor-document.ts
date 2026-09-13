@@ -1,4 +1,4 @@
-import type { EditorNode } from "../node/editor-node";
+import type { EditorNode } from '../node/editor-node.js';
 
 export interface EditorDocument {
   readonly type: 'doc';

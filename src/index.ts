@@ -1,41 +1,14 @@
-export { Editor } from './editor.js';
-
-export type {
-  EditorDocument
-} from './document/editor-document.js';
-
-export type {
-  EditorNode
-} from './node/editor-node.js';
-
-export type {
-  EditorMark
-} from './mark/editor-mark.js';
-
-export type {
-  EditorSelection
-} from './selection/editor-selection.js';
-
-export {
-  createSelection
-} from './selection/editor-selection.js';
-
-export type {
-  EditorCommand
-} from './command/editor-command.js';
-
-export type {
-  EditorTransaction
-} from './transaction/editor-transaction.js';
-
-export {
-  EditorHistory
-} from './history/editor-history.js';
-
-export type {
-  EditorPlugin
-} from './plugin/editor-plugin.js';
-
-export {
-  EditorDom
-} from './dom/editor-dom.js';
+export { Editor } from './editor/editor.js';
+export type {EditorDocument} from './core/document/editor-document.js';
+export type {EditorNode} from './core/node/editor-node.js';
+export type {EditorMark} from './core/mark/editor-mark.js';
+export type {EditorSelection} from './core/selection/editor-selection.js';
+export {createSelection} from './core/selection/editor-selection.js';
+export type {EditorCommand} from './core/command/editor-command.js';
+export type {CommandContext} from './core/command/command-context.js';
+export type {EditorPlugin} from './plugin/editor-plugin.js';
+export type {PluginContext} from './plugin/plugin-context.js';
+export type {ToolbarItem} from './plugin/toolbar/toolbar-item.js';
+export type {KeyboardShortcut} from './plugin/keyboard/keyboard-shortcut.js';
+export {EditorHistory} from './core/history/editor-history.js';
+export {BoldPlugin} from './plugin/features/bold/bold-plugin.js';

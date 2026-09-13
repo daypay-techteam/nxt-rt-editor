@@ -1,31 +1,36 @@
-import { Editor } from './editor.js';
-import type { EditorDocument } from './document/editor-document.js';
-import { EditorDom } from './dom/editor-dom.js';
+
+import type { EditorDocument } from './core/document/editor-document.js';
+import { NxtRTEditor } from './editor/nxt-rt-editor.js';
+import { BoldPlugin } from './plugin/features/bold/bold-plugin.js';
+import { ItalicPlugin } from './plugin/features/italic/italic-plugin.js';
+import { UnderlinePlugin } from './plugin/features/underline/underline-plugin.js';
 
 const initialDocument: EditorDocument = {
   type: 'doc',
   content: [
     {
       type: 'paragraph',
-
       content: [
         {
           type: 'text',
-          text: 'Hello JJEditor!'
+          text: 'Hello NxtEditor!'
         }
       ]
     }
   ]
 };
 
-const editor = new Editor(initialDocument);
-const container = window.document.getElementById('editor');
-if (!container) {
-  throw new Error('Editor container not found');
+const editorElement = document.getElementById('editor');
+if (!editorElement) {
+  throw new Error('NxtEditor element "#editor" was not found.');
 }
-const editorDom = new EditorDom(
-  editor,
-  container
-);
 
-editorDom.mount();
+const editor = new NxtRTEditor({
+    element: editorElement,
+    document: initialDocument,
+    plugins: [
+      new BoldPlugin(),
+      new ItalicPlugin(),
+      new UnderlinePlugin()
+    ]
+});

@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "dev": "serve .",
     "test": "node --test",
     "clean": "rm -rf dist"
   },
@@ -23,6 +24,7 @@
   "author": "JJEditor Contributors",
   "license": "MIT",
   "devDependencies": {
+    "serve": "^14.2.6",
     "typescript": "^7.0.2"
   }
 }

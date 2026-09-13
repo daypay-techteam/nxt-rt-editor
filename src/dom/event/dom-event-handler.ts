@@ -1,6 +1,9 @@
-import type { Editor } from '../editor.js';
+import type { Editor } from '../../editor/editor.js';
+import { DOMParser } from '../parser/dom-parser.js';
 
-export class DomEventHandler {
+export class DOMEventHandler {
+
+  private readonly parser = new DOMParser();
 
   constructor(
     private readonly editor: Editor,
@@ -23,10 +26,12 @@ export class DomEventHandler {
   }
 
   private readonly handleInput = (): void => {
-    const html = this.container.innerHTML;
 
-    console.log('DOM changed:', html);
+      const document =
+    this.parser.parse(this.container);
 
-    this.editor.updateFromHtml(html);
+  this.editor.updateDocument(
+    document
+  );
   };
 }
